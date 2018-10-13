@@ -46,7 +46,7 @@ async def on_ready():
                 await member.add_roles(schmuck_role)
 
         # Moderation Roles
-        bot.owner_role = get(guild.roles, name="BLack")
+        bot.owner_role = get(guild.roles, name="BlackGuy")
         bot.admin_role = get(guild.roles, name="Minions")
         bot.mod_role = get(guild.roles, name="Mods")
         bot.staff_role = get(guild.roles, name="staff")
@@ -72,7 +72,6 @@ async def on_ready():
         'warn',
         'misc',
         'mod',
-        'qrgen',
     ]
 
     # Notify if an addon fails to load.
