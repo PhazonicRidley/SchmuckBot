@@ -35,6 +35,15 @@ async def on_ready():
 
     for guild in bot.guilds:
         bot.guild = guild
+        
+        @bot.event
+        async def on_member_join(member):
+            schmuck_role = discord.utils.get(guild.roles, name="Schmucks")
+            bot_role = discord.utils.get(guild.roles, name="Bots")
+            if member.bot:
+                await member.add_roles(bot_role)
+            if schmuck_role not in member.roles:
+                await member.add_roles(schmuck_role)
 
         # Moderation Roles
         bot.owner_role = get(guild.roles, name="BLack")
