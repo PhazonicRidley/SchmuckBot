@@ -35,15 +35,6 @@ async def on_ready():
 
     for guild in bot.guilds:
         bot.guild = guild
-        
-        @bot.event
-        async def on_member_join(member):
-            schmuck_role = discord.utils.get(guild.roles, name="Schmucks")
-            bot_role = discord.utils.get(guild.roles, name="Bots")
-            if member.bot:
-                await member.add_roles(bot_role)
-            if schmuck_role not in member.roles:
-                await member.add_roles(schmuck_role)
 
         # Moderation Roles
         bot.owner_role = get(guild.roles, name="BlackGuy")
@@ -53,6 +44,10 @@ async def on_ready():
         bot.botdev_role = get(guild.roles, name="SchmuckBotAllow")
         bot.nsfw_role = get(guild.roles, name="mcspankies")
         bot.muted_role = get(guild.roles, name="No Talk")
+
+        # Misc Roles
+        bot.schmuck_role = get(guild.roles, name="Schmucks")
+        bot.bot_role = get(guild.roles, name="Bots")
 
         # Channels
         bot.announcements_channel = get(guild.channels, name="announcements")
@@ -100,6 +95,15 @@ async def on_ready():
 
     print("Client logged in as {}, in the following guild : {}"
           "".format(bot.user.name, bot.guild.name))
+
+
+@bot.event
+async def on_member_join(member):
+
+    if member.bot:
+        await member.add_roles(bot.bot_role)
+    if bot.schmuck_role not in member.roles:
+        await member.add_roles(bot.schmuck_role)
 
 
 @bot.event

@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 
-import asyncio
-import json
-import time
-from os import execv
-from sys import argv
-from subprocess import call
-
 import discord
 from discord.ext import commands
 
@@ -58,7 +51,6 @@ class Moderation:
     @commands.command(aliases=['0020102'])
     async def ban(self, ctx, user="", *, reason=""):
         """Ban a member. (Staff Only)"""
-        owner = ctx.message.guild.owner
         try:
             member = ctx.message.mentions[0]
         except IndexError:
