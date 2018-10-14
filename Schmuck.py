@@ -56,7 +56,6 @@ async def on_ready():
         bot.logs_channel = get(guild.channels, name="server-log")
         bot.memberlogs_channel = get(guild.channels, name="join-leave-log")
 
-
     # Load addons
     addons = [
         'emojif',
@@ -105,6 +104,7 @@ async def on_member_join(member):
         await member.add_roles(bot.bot_role)
     if bot.schmuck_role not in member.roles:
         await member.add_roles(bot.schmuck_role)
+
 
 @bot.event
 async def on_command_error(ctx, error):
