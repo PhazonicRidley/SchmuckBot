@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python3.6
 
-import discord
 from discord.ext import commands
+
 
 class Memes:
     """
@@ -51,7 +51,6 @@ class Memes:
         await ctx.send("http://i.imgur.com/fVAx5oh.png")
         await ctx.send("SS credit 46620:tm:")
 
-
     # SSS spammy-ish memes that need a cooldown
     @commands.cooldown(rate=1, per=30.0, type=commands.BucketType.channel)
     @commands.command(aliases=["astronautlevel"])
@@ -66,7 +65,6 @@ class Memes:
             "The real quandry of all this however, is, how will he now react to the new role in taking over SSS? " +
             "Will his potential ownership be riddeled with as much controversy as his old temporary ownership in 3dshacks? The future alone will know."
         )
-
 
     # Kurisu memes
 
@@ -111,8 +109,7 @@ class Memes:
         """Memes."""
         await ctx.send("http://i.imgur.com/sFD5uSB.png")
 
-
-    ## GIB DONGRODER LAZY DEV
+    # GIB DONGRODER LAZY DEV
     @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def dongroder(self, ctx, variant=""):
@@ -125,10 +122,10 @@ class Memes:
             )
         elif variant == "swotch":
             await ctx.send(
-                "```Hey YOU. YES YOU!!!! YOU CAN CREATE A DOWNGRADER. JUST like can Plailect , Aurora Wright , hedgeberg and SciresM and Daeken work on a Switch 3.0.2 dongroder!!!!!!!!!!!!!!!!!!!!!!!!!!!\nI mean I got browser acess with my 6 verzions of teh dns and now i want to downgrade to 3.0.0 and as I have browser I can boot reswotched but it doesnt boot teh hebrew lawnchair its Aurora Wright fault, its incompetent and lazy to not develop for 3.0.2 I want dongroder to 3.0.0 and trustzone exploit quick it's not hard ur the devs do it now quick.\nYou just have to hack/reprogram/patch the 3.0.2 bootrom so I can dongrode. Think the comunity. Cmon your hackers you acn do it. And plilect should make swotch gudie safer!!! becuase evryone bricks!!!!! And limaswotch should add wii u rom support native. take notes Aurora Wright !!!!!!!!!!!!!!I WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!```" 
+                "```Hey YOU. YES YOU!!!! YOU CAN CREATE A DOWNGRADER. JUST like can Plailect , Aurora Wright , hedgeberg and SciresM and Daeken work on a Switch 3.0.2 dongroder!!!!!!!!!!!!!!!!!!!!!!!!!!!\nI mean I got browser acess with my 6 verzions of teh dns and now i want to downgrade to 3.0.0 and as I have browser I can boot reswotched but it doesnt boot teh hebrew lawnchair its Aurora Wright fault, its incompetent and lazy to not develop for 3.0.2 I want dongroder to 3.0.0 and trustzone exploit quick it's not hard ur the devs do it now quick.\nYou just have to hack/reprogram/patch the 3.0.2 bootrom so I can dongrode. Think the comunity. Cmon your hackers you acn do it. And plilect should make swotch gudie safer!!! becuase evryone bricks!!!!! And limaswotch should add wii u rom support native. take notes Aurora Wright !!!!!!!!!!!!!!I WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!\nI WANT Switch 3.0.2 DONGROADER NOW!!!!!!!!!!!!!!!```"
             )
 
-    @commands.cooldown (rate=1, per=10.0, type=commands.BucketType.channel)
+    @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def gnulinux(self, ctx,):
         """GNU/Linux Copy Pasta"""
@@ -139,11 +136,9 @@ Many computer users run a modified version of the GNU system every day, without 
 There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called "Linux" distributions are really distributions of GNU/Linux.
 ```""")
 
-
-
-    @commands.cooldown (rate=1, per=10.0, type=commands.BucketType.channel)
+    @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
-    async def gitgud(self,ctx,):
+    async def gitgud(self, ctx,):
         """gitgud"""
         await ctx.send("""Let's :clap: do :clap: it :clap: again :clap: memelords
 Mods :clap: asleep :clap: pwn :clap: server
@@ -156,9 +151,9 @@ You :clap: can't :clap: ban :clap: all :clap: the :clap: alts
 Git :clap: fucking :clap: good
 All programs by Paul are cancer and not curable.""")
 
-    @commands.cooldown (rate=1, per=10.0, type=commands.BucketType.channel)
+    @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
-    async def soup(self,ctx):
+    async def soup(self, ctx):
         """WHY ARE YOU BUYING CLOTHES AT THE SOUP STORE?!?!?!?"""
         await ctx.send("""
 ```
@@ -187,7 +182,6 @@ Fucking degenerate soup suckers man. I can't stand it.
 ```
 """)
 
-
     @commands.command()
     async def doubt(self, ctx):
         """That's a fucking lie"""
@@ -195,22 +189,21 @@ Fucking degenerate soup suckers man. I can't stand it.
         await msg.add_reaction("🇽")
 
     @commands.command()
-    async def mirror(self,ctx):
+    async def mirror(self, ctx):
         """yw sean"""
         await ctx.send("https://wiki.archlinux.org/index.php/mirrors <@102743440026009600>")
 
     @commands.command()
-    async def pc(self,ctx):
+    async def pc(self, ctx):
         """The 4 idiots are back at it again"""
         await ctx.send("https://en.wikipedia.org/wiki/Printer_cable <@134113602494791680>")
 
-    @commands.cooldown (rate=1, per=10.0, type=commands.BucketType.channel)
+    @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
-    async def mist(self,ctx):
+    async def mist(self, ctx):
         await ctx.send("""The Modern Information Storage & Transferral format (MIST for short) is a way to store text-based information and related files + metadata (such as images, documents, times, authors, etc.) in a self-contained way, that can be opened in nearly any environment.""")
 
-
-    @commands.cooldown (rate=1, per=10.0, type=commands.BucketType.channel)
+    @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def jt(self, ctx):
         """brought to you by danPixl:tm:"""
@@ -262,7 +255,6 @@ Fucking degenerate soup suckers man. I can't stand it.
 ```
 """)
 
-
     @commands.command()
     async def loss(self, ctx):
         """Is this Loss?"""
@@ -285,6 +277,7 @@ Fucking degenerate soup suckers man. I can't stand it.
 ⠀⣿⣿⡇⠀⢸⣿⣿⡇⠀⠀⠉⠉⠉⠉⠉⠉⠁
 ```
 """)
+
 
 def setup(bot):
     bot.add_cog(Memes(bot))
