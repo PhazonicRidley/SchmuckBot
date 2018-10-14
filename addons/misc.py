@@ -1,8 +1,9 @@
 #!/usr/bin/env python3.6
 
 import datetime
-import discord
+from discord import Member, errors
 from discord.ext import commands
+
 
 class Misc:
     """
@@ -25,7 +26,7 @@ class Misc:
     @commands.command(pass_context=True, aliases=['mc'])
     async def membercount(self, ctx):
         """Prints current member count"""
-        return await ctx.send(str(self.bot.guild.name)+" currently has " + str(len(self.bot.guild.members)) + " members!")
+        return await ctx.send(str(self.bot.guild.name) + " currently has " + str(len(self.bot.guild.members)) + " members!")
 
     @commands.command()
     async def about(self, ctx):
@@ -43,7 +44,7 @@ class Misc:
             await user.add_roles(self.bot.sudo_role)
             await ctx.send(":ambulance: **{} is now a HalfOP! Welcome to the twilight zone!**".format(user))
         else:
-           return await ctx.send("You do not have permission to use this command!")
+            return await ctx.send("You do not have permission to use this command!")
 
     @commands.command(pass_context=True)
     async def unsudo(self, ctx):
@@ -60,10 +61,6 @@ class Misc:
 
         else:
             return await ctx.send("You do not have permission to use this command!")
-
-
-
-
 
     @commands.command(pass_context=True)
     async def togglechannel(self, ctx, channel):
@@ -85,20 +82,89 @@ class Misc:
 
     @commands.has_permissions(manage_messages=True)
     @commands.command()
-    async def clear(self, ctx, amount):
+    async def clear(self, ctx, amount: int):
         """Clears a given amount of messages. (Mods only)"""
 
         channel = ctx.message.channel
-        try:
-            n = int(amount) + 1
-        except ValueError:
-            return await ctx.send("Please mention a valid amount of messages!")
+
+        amount += 1
+        if amount <= 0:
+            await ctx.send("Please mention a valid amount of messages!")
+            return
 
         try:
-            await channel.purge(limit=n)
+            await channel.purge(limit=amount)
             await ctx.send("🗑️ Cleared {} messages in this channel!".format(amount))
-        except discord.errors.Forbidden:
+        except errors.Forbidden:
             await ctx.say("💢 I don't have permission to do this.")
+
+    @commands.command()
+    async def bean(self, ctx, member: Member=None, *, reason: str=""):
+        """Ban a member. (Staff Only)"""
+        if not member:
+            await ctx.send("Please mention a user.")
+            return
+        if member == ctx.message.author:
+            await ctx.send("You cannot ban yourself!")
+            return
+        elif ctx.me is member:
+            await ctx.send("I am unable to ban myself to prevent stupid mistakes.\n"
+                           "Please ban me by hand!")
+            return
+        else:
+            await ctx.send("I've banned {}.".format(member))
+
+    @commands.command()
+    async def kicc(self, ctx, member: Member=None, *, reason: str=""):
+        """Kick a member. (Staff Only)"""
+        if not member:
+            await ctx.send("Please mention a user.")
+            return
+        elif member is ctx.message.author:
+            await ctx.send("You cannot kick yourself!")
+            return
+        elif ctx.me is member:
+            await ctx.send("I am unable to kick myself to prevent stupid mistakes.\n"
+                           "Please kick me by hand!")
+            return
+        await ctx.send("I've kicked {}.".format(member))
+
+    @commands.command()
+    async def moot(self, ctx, member: Member, *, reason=""):
+        """Mutes a user. (Staff Only)"""
+
+        if member is ctx.message.author:
+            await ctx.send("You cannot mute yourself!")
+            return
+        elif ctx.me is member:
+            await ctx.send("I can not mute myself!")
+            return
+        await ctx.send("{} can no longer speak!".format(member))
+
+    @commands.command()
+    async def unmoot(self, ctx, member: Member, *, reason=""):
+        """Unmutes a user. (Staff Only)"""
+
+        await ctx.send("{} is no longer muted!".format(member))
+
+    @commands.command()
+    async def warm(self, ctx, member: Member, *, reason=""):
+        """
+        Warn members. (Staff Only)
+        - First warn : nothing happens, a simple warning
+        - Second warn : muted until an the admin who issued the warning decides to unmute the user.
+        - Third warn : kicked
+        - Fourth warn : kicked
+        - Fifth warn : banned
+        """
+
+        if member is ctx.message.author:
+            await ctx.send("You cannot warn yourself!")
+            return
+        elif ctx.me is member:
+            await ctx.send("I can not warn myself!")
+            return
+        await ctx.send("🚩 I've warned {}.".format(member))
 
 
 def setup(bot):
