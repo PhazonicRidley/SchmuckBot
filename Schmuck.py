@@ -101,9 +101,6 @@ async def on_ready():
 @bot.event
 async def on_member_join(member):
 
-    if member.bot:
-        await member.add_roles(bot.bot_role)
-
 
 @bot.event
 async def on_command_error(ctx, error):
