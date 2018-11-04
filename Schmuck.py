@@ -181,7 +181,7 @@ async def pull(ctx, pip=None):
              "--upgrade", "-r", "requirements.txt"])
         pip_text = " and updated python dependencies"
     await ctx.send("Pulled changes{}! Restarting...".format(pip_text))
-    run([executable, "GLaDOS.py"])
+    run([executable, "Schmuck.py"])
 
 
 @commands.has_permissions(administrator=True)
@@ -189,7 +189,7 @@ async def pull(ctx, pip=None):
 async def restart(ctx):
     """Restart the bot (Staff Only)"""
     await ctx.send("`Restarting, please wait...`")
-    run([executable, "GLaDOS.py"])
+    run([executable, "Schmuck.py"])
     sysexit()
 
 
