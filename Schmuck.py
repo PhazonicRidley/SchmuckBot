@@ -46,7 +46,6 @@ async def on_ready():
         bot.muted_role = get(guild.roles, name="No Talk")
 
         # Misc Roles
-        bot.bot_role = get(guild.roles, name="Bots")
         bot.sudo_role = get(guild.roles, name="sudo")
 
         # Channels
