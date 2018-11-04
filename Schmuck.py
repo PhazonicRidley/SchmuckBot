@@ -97,9 +97,6 @@ async def on_ready():
           "".format(bot.user.name, bot.guild.name))
 
 
-@bot.event
-async def on_member_join(member):
-
 
 @bot.event
 async def on_command_error(ctx, error):
