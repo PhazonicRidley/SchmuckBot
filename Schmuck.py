@@ -46,8 +46,8 @@ async def on_ready():
         bot.muted_role = get(guild.roles, name="No Talk")
 
         # Misc Roles
-        bot.schmuck_role = get(guild.roles, name="Schmucks")
         bot.bot_role = get(guild.roles, name="Bots")
+        bot.sudo_role = get(guild.roles, name="sudo")
 
         # Channels
         bot.announcements_channel = get(guild.channels, name="announcements")
@@ -67,6 +67,7 @@ async def on_ready():
         'warn',
         'misc',
         'mod',
+        'rules',
     ]
 
     # Notify if an addon fails to load.
@@ -102,8 +103,6 @@ async def on_member_join(member):
 
     if member.bot:
         await member.add_roles(bot.bot_role)
-    if bot.schmuck_role not in member.roles:
-        await member.add_roles(bot.schmuck_role)
 
 
 @bot.event
