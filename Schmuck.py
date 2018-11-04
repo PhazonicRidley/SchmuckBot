@@ -60,7 +60,6 @@ async def on_ready():
         'emojif',
         'events',
         'game',
-        'gamenp',
         'memes',
         'speak',
         'warn',
