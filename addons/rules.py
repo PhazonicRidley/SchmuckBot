@@ -40,4 +40,4 @@ async def r4(self, ctx):
 @commands.command(aliases=['r05'])
 async def r5(self, ctx):
         """Displays rule 5."""
-await ctx.send("Implied rules are also rules.")
+        await ctx.send("Implied rules are also rules.")
