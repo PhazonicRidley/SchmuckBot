@@ -10,7 +10,6 @@ class Rules:
 
     def __init__(self, bot):
         self.bot = bot
-print("{} addon loaded.".format(self.__class__.__name__))
 
 
 @commands.command(aliases=['r01'])
