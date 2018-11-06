@@ -61,7 +61,7 @@ class Moderation:
                 await member.kick()
                 await ctx.send("Kicked {}.".format(member))
             except discord.errors.Forbidden:
-await ctx.send("💢 Couldn't kick {}".format(member))
+    await ctx.send("💢 Couldn't kick {}".format(member))
 
     @commands.has_permissions(ban_members=True)
     @commands.command(aliases=['0020102'])
