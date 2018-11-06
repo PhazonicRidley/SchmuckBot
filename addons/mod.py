@@ -47,6 +47,22 @@ class Moderation:
         except discord.errors.Forbidden:
             await ctx.send("💢 I dont have permission to do this.")
 
+    @commands.has_permissions(kick_members=True)
+    @commands.command()
+    async def multikick(self, ctx, *, members):
+        """Kick multiple members. (Staff Only)"""
+        try:
+            mention_check = ctx.message.mentions[0]
+        except IndexError:
+            await ctx.send("Please mention at least one user.")
+            return
+        for member in ctx.message.mentions:
+            try:
+                await member.kick()
+                await ctx.send("Kicked {}.".format(member))
+            except discord.errors.Forbidden:
+await ctx.send("💢 Couldn't kick {}".format(member))
+
     @commands.has_permissions(ban_members=True)
     @commands.command(aliases=['0020102'])
     async def ban(self, ctx, user="", *, reason=""):
