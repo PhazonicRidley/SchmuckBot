@@ -52,7 +52,7 @@ class Moderation:
     async def multikick(self, ctx, *, members):
         """Kick multiple members. (Staff Only)"""
         try:
-            mention_check = ctx.message.mentions[0]
+            member = ctx.message.mentions[0]
         except IndexError:
             await ctx.send("Please mention at least one user.")
             return
