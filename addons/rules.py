@@ -2,6 +2,7 @@
 
 from discord.ext import commands
 
+
 class Rules:
     """
     vs code is ungood
@@ -13,13 +14,13 @@ class Rules:
         @commands.command()
         async def r1(self, ctx):
             """Shows Rule 1"""
-            emb = discord.Embed(title="Rule 1", description="Don't be an asshole to others for no reason. This includes: Racism, sexism, assholery, etc, etc.", colour=discord.Colour.purple())
+            emb = discord.Embed(title="Rule 1", description="Don't be an asshole to others for no reason.", colour=discord.Colour.purple())
             await ctx.send("", embed=emb)
-        
+
         @commands.command()
         async def r2(self, ctx):
             """Shows Rule 2"""
-            emb = discord.Embed(title="Rule 2", description="No NSFW content unless it is in the NSFW chats.", colour=discord.Colour.purple())
+            emb = discord.Embed(title="Rule 2", description="No NSFW content unless in NSFW.", colour=discord.Colour.purple())
             await ctx.send("", embed=emb)
 
         @commands.command()
@@ -37,15 +38,8 @@ class Rules:
         @commands.command()
         async def r5(self, ctx):
             """Shows Rule 5"""
-            emb = discord.Embed(title="Rule 5", description=" Implied rules are also rules, don't use It is not specifically in the rules' as an excuse to be a cuntwad", colour=discord.Colour.purple())
-
-
-
-
-
-
+            emb = discord.Embed(title="Rule 5", description=" Implied rules are also rules.", colour=discord.Colour.purple())
 
 
 def setup(bot):
     bot.add_cog(Rules(bot))
-
