@@ -2,42 +2,50 @@
 
 from discord.ext import commands
 
-
 class Rules:
     """
-    Read this bitch
+    vs code is ungood
     """
+    def __init__(self, bot):
+        self.bot = bot
+        print("{} addon loaded."format(self.__class__.__name__))
 
-        def __init__(self, bot):
-                self.bot = bot
-                print("{} addon loaded.".format(self.__class__.__name__))
-
-
-        @commands.command(aliases=['r01'])
+        @commands.command()
         async def r1(self, ctx):
-                """Displays rule 1."""
-                await ctx.send("Don't be an asshole to others for no reasons.")
-
-
-        @commands.command(aliases=['r02'])
+            """Shows Rule 1"""
+            emb = discord.Embed(title="Rule 1", description="Don't be an asshole to others for no reason. This includes: Racism, sexism, assholery, etc, etc.", colour=discord.Colour.purple())
+            await ctx.send("", embed=emb)
+        
+        @commands.command()
         async def r2(self, ctx):
-                """Displays rule 2."""
-                await ctx.send("No NSFW content unless it's in the NSFW chats.")
+            """Shows Rule 2"""
+            emb = discord.Embed(title="Rule 2", description="No NSFW content unless it is in the NSFW chats.", colour=discord.Colour.purple())
+            await ctx.send("", embed=emb)
 
-
-        @commands.command(aliases=['r03'])
+        @commands.command()
         async def r3(self, ctx):
-                """Displays rule 3."""
-                await ctx.send("Don't spam.")
+            """Shows Rule 3"""
+            emb = discord.Embed(title="Rule 3", description="Don't Spam", colour=discord.Colour.purple())
+            await ctx.send("", embed=emb)
 
-
-        @commands.command(aliases=['r04'])
+        @commands.command()
         async def r4(self, ctx):
-                """Displays rule 4."""
-                await ctx.send("No alts unless allowed .")
+            """Shows Rule 4"""
+            emb = discord.Embed(title="Rule 4", description="No alts with out staff approval", colour=discord.Colour.purple())
+            await ctx.send("", embed=emb)
 
-
-        @commands.command(aliases=['r05'])
+        @commands.command()
         async def r5(self, ctx):
-                """Displays rule 5."""
-                await ctx.send("Implied rules are also rules.")
+            """Shows Rule 5"""
+            emb = discord.Embed(title="Rule 5", description=" Implied rules are also rules, don't use It is not specifically in the rules' as an excuse to be a cuntwad", colour=discord.Colour.purple())
+
+
+
+
+
+
+
+
+def setup(bot):
+    bot.add_cog(Rules(bot))
+
