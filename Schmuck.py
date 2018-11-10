@@ -43,7 +43,7 @@ async def on_ready():
         bot.staff_role = get(guild.roles, name="staff")
         bot.botdev_role = get(guild.roles, name="SchmuckBotAllow")
         bot.nsfw_role = get(guild.roles, name="mcspankies")
-        bot.muted_role = get(guild.roles, name="No Talk")
+        bot.muted_role = get(guild.roles, name="Muted")
 
         # Misc Roles
         bot.sudo_role = get(guild.roles, name="sudo")
