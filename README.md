@@ -1,4 +1,4 @@
-# GLaDOS [![Build Status](https://travis-ci.com/T3CHNOLOG1C/GLaDOS.svg?branch=master)](https://travis-ci.com/T3CHNOLOG1C/GLaDOS)
+# SchmuckBot [![Build Status](https://travis-ci.com/T3CHNOLOG1C/GLaDOS.svg?branch=master)](https://travis-ci.com/T3CHNOLOG1C/GLaDOS)
 A mostly-general purpose discord bot.
 
 ## Requirements :
@@ -11,7 +11,7 @@ A mostly-general purpose discord bot.
 
 ## How to use :
 
-Notice: GLaDOS is NOT intended to work on every server, modification may be required
+Notice: SchmuckBot.py is NOT intended to work on every server, modification may be required
 
 1. Run `GLaDOS.py` once to generate the config files
 2. Edit `config.json` in the database directory
@@ -23,9 +23,5 @@ Notice: GLaDOS is NOT intended to work on every server, modification may be requ
 - [Rapptz](https://github.com/Rapptz) for [discord.py](https://github.com/Rapptz/discord.py/tree/rewrite).
 
 - [Brick](https://github.com/T3CHNOLOG1C/Brick) to serve as a base for GLaDOS.
-
-- [Griffin](https://github.com/GriffinG1) for his various work on the color addon.
-
-- [astronautlevel](https://github.com/astronautlevel2) for his [QR code addon](https://github.com/astronautlevel2/Discord-Cogs/blob/master/qrgen.py).
 
 - Various other people for maintenance and other minor additions
