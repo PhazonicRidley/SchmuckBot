@@ -11,12 +11,12 @@ A mostly-general purpose discord bot.
 
 ## How to use :
 
-Notice: SchmuckBot.py is NOT intended to work on every server, modification may be required
+Notice: Schmuck.py is NOT intended to work on every server, modification may be required
 
-1. Run `GLaDOS.py` once to generate the config files
+1. Run `Schmuck.py` once to generate the config files
 2. Edit `config.json` in the database directory
 3. Edit role and channel names in `GLaDOS.py`
-4. Run `GLaDOS.py`
+4. Run `Schmuck.py`
 
 ## Credits
 
