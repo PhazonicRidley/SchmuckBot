@@ -39,6 +39,7 @@ class Rules:
         async def r5(self, ctx):
             """Shows Rule 5"""
             emb = discord.Embed(title="Rule 5", description=" Implied rules are also rules.", colour=discord.Colour.purple())
+            await ctx.send("", embed=emb)
 
 
 def setup(bot):
