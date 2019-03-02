@@ -48,6 +48,18 @@ async def on_ready():
         # Misc Roles
         bot.sudo_role = get(guild.roles, name="sudo")
 
+        # Color Roles
+        bot.green_role = get(guild.roles, name="Green")
+        bot.blue_role = get(guild.roles, name="Blue")
+        bot.orange_role = get(guild.roles, name="Orange")
+        bot.white_role = get(guild.roles, name="White")
+        bot.black_role = get(guild.roles, name="Black")
+        bot.sand_role = get(guild.roles, name="Sand")
+        bot.pink_role = get(guild.roles, name="Pink")
+        bot.teal_role = get(guild.roles, name="Teal")
+        bot.red_role = get(guild.roles, name="Red")
+        bot.purple_role = get(guild.roles, name="Purple")
+        
         # Channels
         bot.announcements_channel = get(guild.channels, name="announcements")
         bot.botdev_channel = get(guild.channels, name="botwork")
