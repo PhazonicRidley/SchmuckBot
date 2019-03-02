@@ -1,4 +1,4 @@
-# SchmuckBot [![Build Status](https://travis-ci.com/T3CHNOLOG1C/GLaDOS.svg?branch=master)](https://travis-ci.com/T3CHNOLOG1C/GLaDOS)
+# SchmuckBot
 A mostly-general purpose discord bot.
 
 ## Requirements :
