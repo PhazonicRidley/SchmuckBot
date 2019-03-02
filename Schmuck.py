@@ -66,6 +66,7 @@ async def on_ready():
         'misc',
         'mod',
         'rules',
+        'colors',
     ]
 
     # Notify if an addon fails to load.
