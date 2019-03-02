@@ -26,7 +26,7 @@ if not isfile("database/config.json"):
 
 config = load(open("database/config.json", "r"))
 
-bot = commands.Bot(command_prefix=config['prefix'], description="GLaDOS, a general purpose discord bot.",
+bot = commands.Bot(command_prefix=config['prefix'], description="SchmuckBot, a general purpose discord bot.",
                    max_messages=10000, pm_help=True)
 
 
