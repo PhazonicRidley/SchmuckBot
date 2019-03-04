@@ -203,6 +203,11 @@ Fucking degenerate soup suckers man. I can't stand it.
         """Send someone a headpat"""
         await ctx.send("http://i.imgur.com/7V6gIIW.jpg")
         
+    @commands.command()
+    async def hug(self, ctx):
+        """Hug someone over the internet"""
+        await ctx.send("https://i.imgur.com/mWRMu8y.png")
+        
     @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def mist(self, ctx):
