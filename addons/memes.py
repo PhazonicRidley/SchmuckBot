@@ -198,6 +198,11 @@ Fucking degenerate soup suckers man. I can't stand it.
         """The 4 idiots are back at it again"""
         await ctx.send("https://en.wikipedia.org/wiki/Printer_cable <@134113602494791680>")
 
+    @commands.command()
+    async def headpat(self, ctx):
+        """Send someone a headpat"""
+        await ctx.send("http://i.imgur.com/7V6gIIW.jpg")
+        
     @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def mist(self, ctx):
