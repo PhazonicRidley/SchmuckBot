@@ -100,71 +100,71 @@ class Misc:
 
     @commands.command()
     async def bean(self, ctx, member: Member=None, *, reason: str=""):
-        """Ban a member. (Staff Only)"""
+        """Bean a member."""
         if not member:
             await ctx.send("Please mention a user.")
             return
         if member == ctx.message.author:
-            await ctx.send("You cannot ban yourself!")
+            await ctx.send("You cannot bean yourself!")
             return
         elif ctx.me is member:
-            await ctx.send("I am unable to ban myself to prevent stupid mistakes.\n"
-                           "Please ban me by hand!")
+            await ctx.send("I am unable to bean myself to prevent stupid mistakes.\n"
+                           "Please bean me by hand!")
             return
         else:
-            await ctx.send("I've banned {}.".format(member))
+            await ctx.send("I've beanned {}.".format(member))
 
     @commands.command()
     async def kicc(self, ctx, member: Member=None, *, reason: str=""):
-        """Kick a member. (Staff Only)"""
+        """Kicc a member."""
         if not member:
             await ctx.send("Please mention a user.")
             return
         elif member is ctx.message.author:
-            await ctx.send("You cannot kick yourself!")
+            await ctx.send("You cannot kicc yourself!")
             return
         elif ctx.me is member:
-            await ctx.send("I am unable to kick myself to prevent stupid mistakes.\n"
-                           "Please kick me by hand!")
+            await ctx.send("I am unable to kicc myself to prevent stupid mistakes.\n"
+                           "Please kicc me by hand!")
             return
-        await ctx.send("I've kicked {}.".format(member))
+        await ctx.send("I've kicced {}.".format(member))
 
     @commands.command()
     async def moot(self, ctx, member: Member, *, reason=""):
-        """Mutes a user. (Staff Only)"""
+        """Mootss a user. (Staff Only)"""
 
         if member is ctx.message.author:
-            await ctx.send("You cannot mute yourself!")
+            await ctx.send("You cannot moot yourself!")
             return
         elif ctx.me is member:
-            await ctx.send("I can not mute myself!")
+            await ctx.send("I can not moot myself!")
             return
         await ctx.send("{} can no longer speak!".format(member))
 
     @commands.command()
     async def unmoot(self, ctx, member: Member, *, reason=""):
-        """Unmutes a user. (Staff Only)"""
+        """Unmutes a user."""
 
-        await ctx.send("{} is no longer muted!".format(member))
+        await ctx.send("{} is no longer mooted!".format(member))
 
     @commands.command()
     async def warm(self, ctx, member: Member, *, reason=""):
         """
-        Warn members. (Staff Only)
-        - First warn : nothing happens, a simple warning
-        - Second warn : muted until an the admin who issued the warning decides to unmute the user.
-        - Third warn : kicked
-        - Fourth warn : kicked
-        - Fifth warn : banned
+        Warm members. (Staff Only)
+        - First warm : Slightly warm the person
+        - Second warm : Warm the person up a little more
+        - Third warm : More Warmth
+        - Fourth warm : Warm them up to give them the heat of a blanket
+        - Fifth warm : Fucking burn them with the amount of warmth
         """
 
         if member is ctx.message.author:
-            await ctx.send("You cannot warn yourself!")
+            await ctx.send("You cannot warm yourself!")
             return
         elif ctx.me is member:
-            await ctx.send("I can not warn myself!")
+            await ctx.send("I can not warm myself!")
             return
-        await ctx.send("🚩 I've warned {}.".format(member))
+        await ctx.send("🚩 I've warmed {}.".format(member))
 
 
 def setup(bot):
