@@ -209,6 +209,11 @@ Fucking degenerate soup suckers man. I can't stand it.
         await ctx.send("https://i.imgur.com/mWRMu8y.png")
 
     @commands.command()
+    async def kiss(self, ctx):
+        """Kiss someone over the internet"""
+        await ctx.send("https://i.imgur.com/ZQw2xmD.gif")
+
+    @commands.command()
     async def okayretard(self, ctx):
         """Okay Retard"""
         await ctx.send("https://i.imgur.com/FDmN19C.png")
