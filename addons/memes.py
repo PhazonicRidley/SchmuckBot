@@ -218,6 +218,11 @@ Fucking degenerate soup suckers man. I can't stand it.
         """Okay Retard"""
         await ctx.send("https://i.imgur.com/FDmN19C.png")
 
+    @commands.command()
+    async def notfunny(self, ctx):
+        """Not funny.... Didn't laugh"""
+        await ctx.send("https://i.imgur.com/qfElGMr.jpg")
+
     @commands.cooldown(rate=1, per=10.0, type=commands.BucketType.channel)
     @commands.command()
     async def mist(self, ctx):
