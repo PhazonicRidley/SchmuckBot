@@ -5,7 +5,7 @@ from discord import Member, errors
 from discord.ext import commands
 
 
-class Misc:
+class Misc(commands.Cog):
     """
     Miscellaneous commands
     """

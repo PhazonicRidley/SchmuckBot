@@ -1,7 +1,7 @@
 from discord.ext import commands
 
 
-class Rules:
+class Rules(commands.Cog):
     """
     vs code is ungood
     """

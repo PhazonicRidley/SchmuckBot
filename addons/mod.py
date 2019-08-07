@@ -3,7 +3,7 @@
 import discord
 from discord.ext import commands
 
-class Moderation:
+class Moderation(commands.Cog):
     """
     Moderation commands
     """

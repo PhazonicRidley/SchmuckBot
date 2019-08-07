@@ -1,7 +1,8 @@
-from discord import Embed, Colour
+from discord import Embed, Colour, utils
+from discord.ext import commands
 
 
-class Events:
+class Events(commands.Cog):
     """
     bot events
     """
@@ -9,6 +10,7 @@ class Events:
     def __init__(self, bot):
         self.bot = bot
 
+    @commands.Cog.listener()
     async def on_member_join(self, member):
         user = member
         emb = Embed(title="Member Joined", colour=Colour.green())
@@ -17,6 +19,7 @@ class Events:
         logchannel = self.bot.memberlogs_channel
         await logchannel.send("", embed=emb)
 
+    @commands.Cog.listener()
     async def on_member_remove(self, member):
         user = member
         emb = Embed(title="Member Left", colour=Colour.green())
@@ -25,6 +28,7 @@ class Events:
         logchannel = self.bot.memberlogs_channel
         await logchannel.send("", embed=emb)
 
+    @commands.Cog.listener()
     async def on_member_unban(self, guild, member):
         user = member
         emb = Embed(title="Member Unbanned", colour=Colour.red())
