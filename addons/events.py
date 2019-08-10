@@ -1,7 +1,6 @@
 from discord import Embed, Colour, utils
 from discord.ext import commands
 
-
 class Events(commands.Cog):
     """
     bot events
@@ -45,7 +44,7 @@ class Events(commands.Cog):
             await msg.add_reaction(emote)
         else:
             pass
-        
+
 
 def setup(bot):
     bot.add_cog(Events(bot))
