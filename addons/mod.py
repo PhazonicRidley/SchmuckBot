@@ -64,7 +64,7 @@ class Moderation(commands.Cog):
                 await ctx.send("💢 Couldn't kick {}".format(member))
 
     @commands.has_permissions(ban_members=True)
-    @commands.command(aliases=['002-0102, yeet'])
+    @commands.command(aliases=['002-0102', 'yeet'])
     async def ban(self, ctx, user="", *, reason=""):
         """Ban a member. (Staff Only)"""
         try:
