@@ -182,7 +182,7 @@ Fucking degenerate soup suckers man. I can't stand it.
 ```
 """)
 
-    @commands.command()
+    @commands.command(aliases=['x'])
     async def doubt(self, ctx):
         """That's a fucking lie"""
         msg = await ctx.send("Press x to doubt.")
