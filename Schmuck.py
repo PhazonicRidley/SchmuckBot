@@ -37,7 +37,7 @@ async def on_ready():
         bot.guild = guild
 
         # Moderation Roles
-        bot.owner_role = get(guild.roles, name="BlackGuy")
+        bot.owner_role = get(guild.roles, name="Owner")
         bot.admin_role = get(guild.roles, name="Minions")
         bot.mod_role = get(guild.roles, name="Mods")
         bot.staff_role = get(guild.roles, name="staff")
