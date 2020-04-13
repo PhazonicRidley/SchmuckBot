@@ -158,15 +158,26 @@ async def unload(ctx, addon: str):
                        ''.format(type(e).__name__, e))
 
 
-@bot.command(name='reload', aliases=['load'])
+@bot.command()
 @checks.is_botdev()
 async def reload(ctx, addon: str):
-    """(Re)loads an addon."""
+    """Reloads an addon."""
     try:
         addon = "addons." + addon
         bot.unload_extension(addon)
         bot.load_extension(addon)
         await ctx.send('✅ Addon reloaded.')
+    except Exception as e:
+        await ctx.send('💢 Failed!\n```\n{}: {}\n```'.format(type(e).__name__, e))
+
+@bot.command()
+@checks.is_botdev()
+async def load(ctx, addon: str):
+    """loads an addon."""
+    try:
+        addon = "addons." + addon
+        bot.load_extension(addon)
+        await ctx.send('✅ Addon loaded.')
     except Exception as e:
         await ctx.send('💢 Failed!\n```\n{}: {}\n```'.format(type(e).__name__, e))
 
